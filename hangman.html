@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="hangman.css"
-    <script src="hangman.js" defer></script>
+    <script src="hangman.js"></script>
     
 </head>
 <body>
     <div>
         <img src="images/hangman6.gif" alt ="hangman">
-        <div id = "clue"> Press New Game to play!</div>
+        <div id="clue"> Press New Game to play!</div>
     </div>
 
     <div>
         <input type = "text" size = "1" maxlength="1">
-        <button>Guess</button>
+        <button onclick="guess();">Guess</button>
     </div>
+    <div id="guesses">
 
+    </div>
     <div id ="newgamearea">
-        <button> New Game </button>
+        <button onclick="newGame();">New Game</button>
     </div>
 
 
