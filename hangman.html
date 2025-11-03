@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="hangman.css"
     <script src="hangman.js"></script>
-    
+    <link rel="stylesheet" href="hangman.css"
 </head>
+
 <body>
     <div>
-        <img src="images/hangman6.gif" alt ="hangman">
+        <img id="hangmanImage" src="images/hangman6.gif" alt ="Hangman">
         <div id="clue"> Press New Game to play!</div>
     </div>
 
     <div>
-        <input type = "text" size = "1" maxlength="1">
+        <input id="guess" type = "text" size = "1" maxlength="1">
         <button onclick="guessLetter();">Guess</button>
     </div>
     <div id="guesses">
@@ -24,7 +21,6 @@
     <div id ="newgamearea">
         <button onclick="newGame();">New Game</button>
     </div>
-
 
 </body>
 </html>
