@@ -14,7 +14,7 @@ function newGame(){
 
     document.getElementById("clue").innerHTML = "";
     document.getElementById("guesses").innerHTML = "Guessed Letters: ";
-    document.getElementById("hangmanImage").src = "images/hangman6.gif";
+    document.getElementById("hangmanImage").src = "./images/hangman6.gif";
     updatePage();
     }
 
@@ -25,6 +25,7 @@ function guessLetter() {
     if (letter === "" || guesses.indexOf(letter) >= 0) return;
     if (word.indexOf(letter) < 0) {
         guess_count--;
+        if (guess_count <0) guess_count = 0;
     }
     guesses += letter;
     updatePage();
@@ -49,7 +50,7 @@ var guessArea = document.getElementById("guesses");
 guessArea.innerHTML = "Guessed Letters" + guesses;
 
 var image = document.getElementById("hangmanImage");
-image.src = "images/hangman" + guess_count + ".gif";
+image.src = "./images/hangman" + guess_count + ".gif?" + Date.now();
 
 if (allGuessed) {
     guessArea.innerHTML += "<br> You Win!";
